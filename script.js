@@ -21,8 +21,8 @@
         .then(response => response.json()).then(response =>{
             let allDetails = response.results[0].components; //passing components object to allDetails variable
             console.table(allDetails);
-            let {county, postcode, country} = allDetails; //getting country, postcode, country properties value from allDetails obj
-            button.innerText = `${county} ${postcode}, ${country}`; //passing these value to the button innerText
+            let {city, postcode, country} = allDetails; //getting country, postcode, country properties value from allDetails obj
+            button.innerText = `${city} ${postcode}, ${country}`; //passing these value to the button innerText
         }).catch(()=>{ //if error any error occured
             button.innerText = "Something went wrong";
         });
